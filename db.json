@@ -1,0 +1,15 @@
+{
+  "subjects": [
+    {
+      "subject_id": "SUBJ001",
+      "age": 45,
+      "gender": "Female"
+    }
+  ],
+  "labs": [
+    {
+      "subject_id": "SUBJ001",
+      "hba1c": 8.2
+    }
+  ]
+}
