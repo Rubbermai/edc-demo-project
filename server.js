@@ -1,19 +1,13 @@
-const jsonServer = require("json-server");
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults();
+// Lab validation (EDC edit check)
+server.post("/validate/lab", (req, res) => {
+  const { hba1c } = req.body;
 
-server.use(middlewares);
-server.use(jsonServer.bodyParser);
+  if (hba1c < 7 || hba1c > 10) {
+    return res.json({
+      status: "QUERY",
+      message: "HbA1c out of range (7–10)"
+    });
+  }
 
-server.get("/", (req, res) => {
-  res.send("EDC Backend Running ✅");
-});
-
-server.use(router);
-
-const PORT = process.env.PORT || 3001;
-
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  res.json({ status: "OK" });
 });
