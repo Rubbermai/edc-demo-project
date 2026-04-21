@@ -1,15 +1,39 @@
 {
   "subjects": [
     {
+      "id": 1,
       "subject_id": "SUBJ001",
       "age": 45,
       "gender": "Female"
     }
   ],
+
   "labs": [
     {
+      "id": 1,
       "subject_id": "SUBJ001",
-      "hba1c": 8.2
+      "hba1c": 8.2,
+      "fbg": 150
     }
-  ]
+  ],
+
+  "adverse_events": [
+    {
+      "id": 1,
+      "subject_id": "SUBJ001",
+      "term": "Headache",
+      "severity": "Mild"
+    }
+  ],
+
+  "ecoa": [
+    {
+      "id": 1,
+      "subject_id": "SUBJ001",
+      "glucose": 140,
+      "fatigue": true
+    }
+  ],
+
+  "queries": []
 }
